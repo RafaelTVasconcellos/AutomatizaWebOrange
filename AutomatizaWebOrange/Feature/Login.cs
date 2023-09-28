@@ -88,7 +88,7 @@ namespace AutomatizaWebOrange.Feature
             WriteLine("E: Deverá preencher o @Username preeviamente cadastrado");
             WriteLine("E: Clicar no botão [Resset Password]");
             WriteLine("E: Visualizará em sua tela a mensagem 'Reset Password link sent' ");
-            WriteLine("E: Reberá em seu e-mail a mensagem de recuperação de senha");
+            WriteLine("E: Receberá em seu e-mail a mensagem de recuperação de senha");
 
             LoginSteps.ValidarTrocaDeSenha("Admin");
         }

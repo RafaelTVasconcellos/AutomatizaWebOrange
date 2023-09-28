@@ -12,13 +12,13 @@ namespace AutomatizaWebOrange.Steps
     {
         public static void PreencherUsername(string Username)
         {
-            WriteLine("Preenche campo Username");
+            WriteLine("Preencher campo Username");
             Driver.FindElement(RequestPasswordResetCodePage.Username).SendKeys(Username);
         }
 
         public static void ClicarBotaoResetPassword()
         {
-            WriteLine("Realiza o click no botão 'Reset Password'");
+            WriteLine("Realizar o click no botão 'Reset Password'");
             Driver.FindElement(RequestPasswordResetCodePage.btResetPassword).Click();
         }
 

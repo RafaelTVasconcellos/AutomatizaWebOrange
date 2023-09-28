@@ -18,13 +18,13 @@ namespace AutomatizaWebOrange.Steps
         public static void Login(string Username, string Password)
         {
             Thread.Sleep(5000);
-            WriteLine("Preenche campo Username");
+            WriteLine("Preencher campo Username");
             Driver.FindElement(LoginPage.Username).SendKeys(Username);
             Thread.Sleep(5000);
-            WriteLine("Preenche campo Password");
+            WriteLine("Preencher campo Password");
             Driver.FindElement(LoginPage.Password).SendKeys(Password);
             Thread.Sleep(5000);
-            WriteLine("Realiza o click no botão Login");
+            WriteLine("Realizar o click no botão Login");
             Driver.FindElement(LoginPage.Login).Click();
         }
 
@@ -47,7 +47,7 @@ namespace AutomatizaWebOrange.Steps
         {
             Login(Username, Password);
 
-            WriteLine("Realizo a validação com usuário inválido");
+            WriteLine("Realizar a validação com usuário inválido");
             string UsernameInvalido = Convert.ToString(Driver.FindElement(LoginPage.UsernamePasswordInvalido).Text);
             Assert.AreEqual("Invalid credentials", UsernameInvalido, "Usuário inválido conforme esperado");
         }
@@ -56,7 +56,7 @@ namespace AutomatizaWebOrange.Steps
         {
             Login(Username, Password);
 
-            WriteLine("Realizo a validação com senha inválida");
+            WriteLine("Realizar a validação com senha inválida");
             string PasswordInvalido = Convert.ToString(Driver.FindElement(LoginPage.UsernamePasswordInvalido).Text);
             Assert.AreEqual("Invalid credentials", PasswordInvalido, "Senha inválida conforme esperado");
         }
@@ -84,7 +84,7 @@ namespace AutomatizaWebOrange.Steps
         public static void ValidarTrocaDeSenha(string Username)
         {
             Thread.Sleep(5000);
-            WriteLine("Preenche campo Username");
+            WriteLine("Preencher campo Username");
             Driver.FindElement(LoginPage.Username).SendKeys(Username);
 
             WriteLine("Clicar no botão [Forgot Your Password]");
