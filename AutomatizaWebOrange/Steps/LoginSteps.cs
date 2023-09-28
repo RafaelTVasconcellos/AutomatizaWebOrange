@@ -17,13 +17,13 @@ namespace AutomatizaWebOrange.Steps
         /// </summary>
         public static void Login(string Username, string Password)
         {
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             WriteLine("Preenche campo Username");
             Driver.FindElement(LoginPage.Username).SendKeys(Username);
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             WriteLine("Preenche campo Password");
             Driver.FindElement(LoginPage.Password).SendKeys(Password);
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             WriteLine("Realiza o click no botão Login");
             Driver.FindElement(LoginPage.Login).Click();
         }
@@ -32,7 +32,7 @@ namespace AutomatizaWebOrange.Steps
         {
             Login(Username, Password);
 
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             WriteLine("Validação realizada pela descrição 'Dashboard' na tela");
             string LoginSucesso = Convert.ToString(Driver.FindElement(DashboardPage.pgDashboard).Text);
             Assert.AreEqual("Dashboard", LoginSucesso, "Login foi realizado com sucesso");
@@ -65,7 +65,7 @@ namespace AutomatizaWebOrange.Steps
         {
             Login(Username, Password);
 
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             WriteLine("Campo obrigatório Username validado com sucesso");
             string UsernameObrigatorio = Convert.ToString(Driver.FindElement(LoginPage.CampoObrigatorio).Text);
             Assert.AreEqual("Required", UsernameObrigatorio, "Campo obrigatório Username validado com sucesso");
@@ -75,7 +75,7 @@ namespace AutomatizaWebOrange.Steps
         {
             Login(Username, Password);
 
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             WriteLine("Campo obrigatório Password validado com sucesso");
             string PasswordObrigatorio = Convert.ToString(Driver.FindElement(LoginPage.CampoObrigatorio).Text);
             Assert.AreEqual("Required", PasswordObrigatorio, "Campo obrigatório Password validado com sucesso");
@@ -83,7 +83,7 @@ namespace AutomatizaWebOrange.Steps
 
         public static void ValidarTrocaDeSenha(string Username)
         {
-            //Thread.Sleep(5000);
+            Thread.Sleep(5000);
             WriteLine("Preenche campo Username");
             Driver.FindElement(LoginPage.Username).SendKeys(Username);
 
