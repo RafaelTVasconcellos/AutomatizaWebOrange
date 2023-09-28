@@ -14,5 +14,8 @@ namespace AutomatizaWebOrange.PageObjects
         public static By Login = By.XPath("//*[(text()= ' Login ' )]");
 
         public static By UsernamePasswordInvalido = By.XPath("//*[(text()= 'Invalid credentials' )]");
+        public static By CampoObrigatorio = By.XPath("//*[(text()='Required')]");
+        public static By btForgotYourPassword = By.XPath("//*[text()='Forgot your password? ']");
+        
     }
 }
